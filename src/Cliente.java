@@ -32,9 +32,10 @@ public class Cliente {
 			JOptionPane.showMessageDialog(null, "El cliente"+ nombre + "se encontró");
 		} else {
             JOptionPane.showMessageDialog(null, "El cliente no se encontro");
+            return true;
 		}
     	 
-    	 return true;
+    	 return false;
     	 
      }
 	
