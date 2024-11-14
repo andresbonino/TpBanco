@@ -1,3 +1,4 @@
+import javax.swing.JOptionPane;
 
 public class Cliente {
 
@@ -25,7 +26,16 @@ public class Cliente {
 		this.dni = dni;
 	}
 	 
-     
-     
+     public boolean buscarCliente(String nombre) {
+    	 
+    	 if (nombre!=null) {
+			JOptionPane.showMessageDialog(null, "El cliente"+ nombre + "se encontró");
+		} else {
+            JOptionPane.showMessageDialog(null, "El cliente no se encontro");
+		}
+    	 
+    	 return true;
+    	 
+     }
 	
 }
