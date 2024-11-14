@@ -38,5 +38,23 @@ public class Cliente {
     	 return false;
     	 
      }
+     
+public void registarCliente(String nombre) {
+    	 
+    	 if (nombre!=null) {
+			JOptionPane.showMessageDialog(null, "El cliente"+ nombre + "esta registrado");
+		} else {
+            JOptionPane.showMessageDialog(null, "El cliente no esta registrado");
+            
+            Cliente cliente = new Cliente("Jorge" , "456895");
+            
+            
+          
+		}
+    	 
+ 
+    	 
+     }
+     
 	
 }
