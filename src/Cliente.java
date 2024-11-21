@@ -2,12 +2,14 @@ import javax.swing.JOptionPane;
 
 public class Cliente {
 
-     private String nombre;
-     private String dni;
-     
-	public Cliente(String nombre, String dni) {
+	private String nombre;
+	private String dni;
+	private Cuenta cuenta;
+	
+	public Cliente(String nombre, String dni, Cuenta cuenta) {
 		this.nombre = nombre;
 		this.dni = dni;
+		this.cuenta = cuenta;
 	}
 
 	public String getNombre() {
@@ -25,36 +27,24 @@ public class Cliente {
 	public void setDni(String dni) {
 		this.dni = dni;
 	}
-	 
-     public boolean buscarCliente(String nombre) {
-    	 
-    	 if (nombre!=null) {
-			JOptionPane.showMessageDialog(null, "El cliente"+ nombre + "se encontró");
-		} else {
-            JOptionPane.showMessageDialog(null, "El cliente no se encontro");
-            return true;
-		}
-    	 
-    	 return false;
-    	 
-     }
-     
-public void registarCliente(String nombre) {
-    	 
-    	 if (nombre!=null) {
-			JOptionPane.showMessageDialog(null, "El cliente"+ nombre + "esta registrado");
-		} else {
-            JOptionPane.showMessageDialog(null, "El cliente no esta registrado");
-            
-            Cliente cliente = new Cliente("Jorge" , "456895");
-            
-            
-          
-		}
-    	 
- 
-    	 
-     }
-     
+
+	public Cuenta getCuenta() {
+		return cuenta;
+	}
+
+	public void setCuenta(Cuenta cuenta) {
+		this.cuenta = cuenta;
+	}
+	
+	public static String validarNombre(String texto) {
+		String nombre;
+		do {
+
+			nombre = JOptionPane.showInputDialog(texto);
+
+		} while (nombre.equals(""));
+		return nombre;
+	}
+	
 	
 }
